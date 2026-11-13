@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Radhika Khapra – Web Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#EEF1F4;--ink:#0F1E33;--muted:#56667B;--line:#C9D2DC;--accent:#2B50F0;--on-accent:#fff;
+--display:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;--body:"Newsreader",Georgia,serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#0C1626;--ink:#E8EEF6;--muted:#93A3B8;--line:#22324A;--accent:#8AA3FF;--on-accent:#0C1626;color-scheme:dark}}
+:root[data-theme="dark"]{--paper:#0C1626;--ink:#E8EEF6;--muted:#93A3B8;--line:#22324A;--accent:#8AA3FF;--on-accent:#0C1626;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 1.25rem/1.6 var(--body)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:2px}
+.wrap{max-width:62rem;margin:0 auto;padding:0 clamp(1.25rem,5vw,3rem)}
+nav{display:flex;justify-content:space-between;align-items:center;padding:1.5rem 0;font:500 1rem var(--display)}
+nav div{display:flex;gap:1.5rem}
+nav a{text-decoration:none}nav a:hover{color:var(--accent)}
+.hero{position:relative;min-height:78vh;display:flex;flex-direction:column;justify-content:center;padding:4rem 0 5rem}
+#dots{position:absolute;inset:0;width:100%;height:100%;z-index:0}
+.hero .in{position:relative;z-index:1;pointer-events:none}
+.hero .in a{pointer-events:auto}
+h1{font:800 clamp(3rem,10vw,7.5rem)/.95 var(--display);letter-spacing:-.04em;margin:0 0 1.75rem;max-width:12ch}
+.lede{max-width:34rem;font-size:1.45rem;color:var(--muted);margin:0 0 2rem}
+.btn{display:inline-block;background:var(--accent);color:var(--on-accent);padding:.8rem 1.4rem;border-radius:999px;text-decoration:none;font:500 1.05rem var(--display)}
+.btn:hover{filter:brightness(1.1)}
+.link{margin-left:1.25rem;font:500 1.05rem var(--display)}
+section{padding:4.5rem 0;border-top:1px solid var(--line)}
+h2{font:800 clamp(1.8rem,4vw,2.6rem)/1.1 var(--display);letter-spacing:-.03em;margin:0 0 2.5rem}
+details{border-bottom:1px solid var(--line)}
+summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:1fr auto;gap:.25rem 1.5rem;padding:1.5rem 0;align-items:baseline}
+summary::-webkit-details-marker{display:none}
+summary h3{font:800 1.7rem/1.2 var(--display);letter-spacing:-.02em;margin:0;transition:color .2s}
+summary:hover h3{color:var(--accent)}
+summary .yr{font:500 1rem var(--display);color:var(--muted)}
+summary .tag{grid-column:1/-1;color:var(--muted);font-size:1.1rem}
+details .body{padding:0 0 2rem;max-width:40rem}
+details .body p{margin:.5rem 0 1rem}details .body ul{margin:.5rem 0 1rem;padding-left:1.2rem}details .body li{margin-bottom:.5rem}
+details[open] summary h3{color:var(--accent)}
+details[open] .body{animation:open .35s ease}
+@keyframes open{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+.stack{font:500 .95rem var(--display);color:var(--muted)}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:2.5rem}
+.cols h3{font:800 1.15rem var(--display);margin:0 0 .5rem}
+.cols p{margin:0;color:var(--muted)}
+.tl{border-left:2px solid var(--line);margin-left:.4rem;padding-left:2rem}
+.tl div{position:relative;padding-bottom:2.25rem}
+.tl div::before{content:"";position:absolute;left:calc(-2rem - 7px);top:.6rem;width:12px;height:12px;border-radius:50%;background:var(--accent)}
+.tl b{font:800 1.25rem var(--display)}.tl span{display:block;color:var(--muted)}
+.contact h2{font-size:clamp(2.4rem,7vw,5rem);max-width:14ch}
+footer{padding:2rem 0 3rem;color:var(--muted);font-size:1rem;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+button.t{background:none;border:1px solid var(--line);color:var(--ink);border-radius:999px;padding:.3rem .9rem;font:500 .95rem var(--display);cursor:pointer}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}details[open] .body{animation:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav><a href="#top"><b>Radhika Khapra</b></a><div><a href="#work">Work</a><a href="#about">About</a><a href="#contact">Contact</a></div></nav>
+
+<header class="hero" id="top">
+<canvas id="dots" aria-hidden="true"></canvas>
+<div class="in">
+<h1>Full-stack apps, built end to end.</h1>
+<p class="lede">I’m Radhika, a B.Tech CSE student in Sonipat who builds web apps with JavaScript, Node.js and MongoDB. I’m looking for a web developer internship.</p>
+<a class="btn" href="#work">See my work</a><a class="link" href="mailto:radhikakhapra1@gmail.com">Email me</a>
+</div>
+</header>
+
+<section id="work">
+<h2>Project</h2>
+<details open><summary><h3>Wanderlust, an Airbnb-inspired listings platform</h3><span class="tag">A full-stack site for creating, browsing and reviewing places to stay.</span></summary>
+<div class="body"><ul><li>Create, view, edit and delete property listings, with a review and rating system.</li><li>Sign-up, login and permissions with Passport.js, with sessions stored in MongoDB Atlas.</li><li>Image uploads through Cloudinary, and data stored in MongoDB Atlas with Mongoose.</li><li>Responsive pages built with EJS, Bootstrap, HTML, CSS and JavaScript.</li></ul><p class="stack">HTML, CSS, JavaScript, Bootstrap, Node.js, Express.js, MongoDB Atlas, Mongoose, EJS</p></div></details>
+</section>
+
+<section id="about">
+<h2>What I work with</h2>
+<div class="cols">
+<div><h3>Languages</h3><p>Java, JavaScript (ES6+), HTML5, CSS3, SQL</p></div>
+<div><h3>Back end</h3><p>Node.js, Express.js, EJS, REST APIs</p></div>
+<div><h3>Databases</h3><p>MongoDB, MySQL, PostgreSQL</p></div>
+<div><h3>Tools</h3><p>Git, GitHub, Terminal, Postman</p></div>
+<div><h3>Fundamentals</h3><p>Data structures and algorithms, object-oriented programming</p></div>
+</div>
+</section>
+
+<section>
+<h2>Education and certifications</h2>
+<div class="tl">
+<div><b>B.Tech, Computer Science</b><span>Graduating September 2027</span>Gateway Institute of Engineering &amp; Technology, Sonipat. CGPA 7.38.</div>
+<div><b>Full Stack Java Development</b><span>September 2026</span>Simplilearn</div>
+<div><b>Generative AI Fluency</b><span>August 2026</span>FutureSkills Prime</div>
+<div><b>Gen AI course</b><span>February 2026</span>Nasscom Skill Development Program</div>
+<div><b>Data Structures and Algorithms in Java</b><span>Certificate</span>Apna College</div>
+</div>
+</section>
+
+<section class="contact" id="contact">
+<h2>Looking for an intern? Let’s talk.</h2>
+<a class="btn" href="mailto:radhikakhapra1@gmail.com">radhikakhapra1@gmail.com</a><a class="link" href="https://www.linkedin.com/in/radhika-khapra-973b632ab/">LinkedIn</a>
+</section>
+
+<footer><span>© 2026 Radhika Khapra</span><button class="t" id="theme" type="button">Switch theme</button></footer>
+</div>
+
+<script>
+(function(){
+  var c=document.getElementById('dots'),x=c.getContext('2d'),W,H,pts=[],m={x:-999,y:-999},g=34;
+  var reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
+  function col(n){return getComputedStyle(document.documentElement).getPropertyValue(n).trim()}
+  function size(){var r=c.getBoundingClientRect(),d=window.devicePixelRatio||1;W=r.width;H=r.height;c.width=W*d;c.height=H*d;x.setTransform(d,0,0,d,0,0);pts=[];
+    for(var i=g/2;i<W;i+=g)for(var j=g/2;j<H;j+=g)pts.push({x:i,y:j});draw()}
+  function draw(){x.clearRect(0,0,W,H);var a=col('--accent'),l=col('--line');
+    for(var k=0;k<pts.length;k++){var p=pts[k],dx=p.x-m.x,dy=p.y-m.y,d=Math.sqrt(dx*dx+dy*dy),f=Math.max(0,1-d/160),r=1.6+f*5;
+      x.fillStyle=f>0.02?a:l;x.globalAlpha=f>0.02?.35+f*.65:1;
+      x.beginPath();x.arc(p.x+(dx/(d||1))*f*-10,p.y+(dy/(d||1))*f*-10,r,0,6.283);x.fill()}x.globalAlpha=1}
+  var raf;function move(e){var r=c.getBoundingClientRect();m.x=e.clientX-r.left;m.y=e.clientY-r.top;if(!raf)raf=requestAnimationFrame(function(){raf=0;draw()})}
+  if(!reduce){window.addEventListener('pointermove',move);window.addEventListener('pointerleave',function(){m.x=m.y=-999;draw()})}
+  window.addEventListener('resize',size);size();
+  document.getElementById('theme').addEventListener('click',function(){
+    var r=document.documentElement,dark=getComputedStyle(r).getPropertyValue('color-scheme').indexOf('dark')>-1;
+    r.setAttribute('data-theme',dark?'light':'dark');setTimeout(draw,30)});
+})();
+</script>
+</body>
+</html>
